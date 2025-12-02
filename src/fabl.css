@@ -142,7 +142,7 @@ body {
 
 .div {
   text-align: center;
-  background-color: rgba(210, 19, 19, 0.5);
+  background: linear-gradient(to right, yellow 0%, green 30%);
   padding: 20px;
   border: 5px dashed burlywood;
   border-radius: 15px;
@@ -151,7 +151,7 @@ body {
   max-width: 600px;
 }
 .div #login{
-  background: #ff0000;
+  background: linear-gradient(to right, rgb(170, 3, 3) 70%, rgb(26, 0, 128) 30%);
 }
 
 .header { 
@@ -160,20 +160,27 @@ body {
   width: 100%;
   background-color: blue;
 }
+.header .logo-supnum{
+  position: absolute;
+  left: 100px;
+  top: 100px;
+  border-radius: 15px;
+}
 
 .tous {
   width: 100%;
-  background-color: blueviolet;
+ background: linear-gradient(to right, rgb(3, 177, 41) 0%, black 50%);
   padding: 20px 0;
 }
 
 .tous #p1 {
-  background-color: turquoise;
+  background: linear-gradient(to right, yellow 30%,rgb(85, 0, 255) 30%, green 80%);
   text-align: center;
   padding: 10px;
   margin: 20px auto;
   width: 80%;
   max-width: 600px;
+  margin-left: 600px;
 }
 
 button { 

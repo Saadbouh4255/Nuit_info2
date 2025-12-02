@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './fabl.css';
+import Logosupnum from "./Logo-supnum.jpg";
 
 const WorstInterface = () => {
   const [alerts, setAlerts] = useState([]);
@@ -109,6 +110,23 @@ const WorstInterface = () => {
     };
   }, [badLogin]);
 
+
+
+
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+  
+    const interval = setInterval(() => {
+      setVisible(prev => !prev);
+    }, 100); 
+
+    
+    return () => clearInterval(interval);
+  }, []);
+
+
+
   return (
     <div className='contenent'>
       <div className={`App ${flash ? 'flash' : ''}`}>
@@ -123,6 +141,12 @@ const WorstInterface = () => {
         {/* الواجهة الرئيسية - تظهر دائماً */}
         <div className='tous'>
           <div className="header">
+            <span className="logo-supnum">
+              {visible && (
+              <img src={Logosupnum} alt="SupNum Logo" style={{ width: "200px" }} />
+
+            )}
+            </span>
             <div className="div">
               <h1>Welcome to the Worst Interface Ever</h1>
               <p>This interface is intentionally designed to be confusing and difficult to use.</p>
